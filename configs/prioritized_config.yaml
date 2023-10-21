@@ -1,0 +1,8 @@
+max_epochs: 10000
+dqn_type: RegularDQN
+network_type: mlp
+replay_buffer_type: prioritized  # Prioritized DQN
+env: MinAtar/Freeway
+device: cuda
+rollouts_per_validation: 3
+validate_every_n_epochs: 1000

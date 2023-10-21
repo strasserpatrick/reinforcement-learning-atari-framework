@@ -1,0 +1,56 @@
+batch_size: 128
+device: cpu
+dqn_type: DoubleDQN
+env: MinAtar/Freeway
+episode_length: 200
+eps_decay: 1000
+eps_end: 0.01
+eps_start: 1.0
+gamma: 0.99
+hidden_size: 128
+hparams: !!python/object:utils.config.DQNConfig
+  __dict__:
+    batch_size: 128
+    device: cpu
+    dqn_type: !!python/object/apply:utils.config.DQNType
+    - DoubleDQN
+    env: MinAtar/Freeway
+    episode_length: 200
+    eps_decay: 1000
+    eps_end: 0.01
+    eps_start: 1.0
+    gamma: 0.99
+    hidden_size: 128
+    lr: 0.001
+    max_episode_reward: 200
+    max_epochs: 10000
+    network_type: !!python/object/apply:utils.config.Networks
+    - mlp
+    num_hidden_layers: 2
+    replay_buffer_type: !!python/object/apply:utils.config.ReplayBufferTypes
+    - vanilla
+    replay_size: 1000
+    rollouts_per_validation: 3
+    sync_rate: 10
+    validate_every_n_epochs: 1000
+    warm_start_steps: 1000
+  __pydantic_extra__: null
+  __pydantic_fields_set__: !!set
+    device: null
+    dqn_type: null
+    env: null
+    max_epochs: null
+    rollouts_per_validation: null
+    validate_every_n_epochs: null
+  __pydantic_private__: null
+lr: 0.001
+max_episode_reward: 200
+max_epochs: 10000
+network_type: mlp
+num_hidden_layers: 2
+replay_buffer_type: vanilla
+replay_size: 1000
+rollouts_per_validation: 3
+sync_rate: 10
+validate_every_n_epochs: 1000
+warm_start_steps: 1000

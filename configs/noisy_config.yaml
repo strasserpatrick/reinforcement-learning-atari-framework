@@ -1,0 +1,7 @@
+max_epochs: 10000
+dqn_type: RegularDQN
+network_type: mlp_noisy
+env: MinAtar/Freeway
+device: cuda
+rollouts_per_validation: 3
+validate_every_n_epochs: 1000

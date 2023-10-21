@@ -1,0 +1,5 @@
+max_epochs: 10000
+env: MinAtar/Freeway
+device: cuda
+rollouts_per_validation: 3
+validate_every_n_epochs: 1000
